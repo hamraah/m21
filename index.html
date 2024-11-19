@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'IRANYekanMobileMedium';
+            src: url('./assets/IRANYekanMobileMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(./assets/backgroud-public.ccd4aa39.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: 'IRANYekanMobileMedium', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2,
+        h3,
+        p {
+            margin: 10px 20px;
+        }
+
+        .link {
+            padding: 10px 0px;
+            margin-top: 5rem;
+            /* height: 10%; */
+            width: 80%;
+            background-color: #ec3237;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            text-decoration:none;
+            cursor: pointer;
+        }
+        .link:active{
+            color: #fff;
+        }
+        .link:hover{
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                text-align: center;
+            }
+
+            img {
+                max-width: 200px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .link {
+                width: 40%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            body {
+                /* padding: 60px; */
+                text-align: center;
+            }
+
+            img {
+                max-width: 250px;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            .link {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./assets/logo.png" alt="لوگو">
+    <div>
+        <h2>همراه بانک ملت</h2>
+        <h3>بانکداری دیجیتال بانک ملت ایران</h3>
+        <p>همراه بانک ملت سامانه‌ی هوشمند بانکداری دیجیتال بانک ملت ایرانه که با تمرکز بر برآورده کردن خواسته‌های شما، نگاه
+            نوآورانه، دریافت خدمات هوشمند بانکی و مالی رو بصورت امن، ساده و سریع برای همه فراهم کرده.</p>
+    </div>
+    <a class="link" onclick="handleDownload(event)"><h3>دریافت اپلیکیشن</h3></a>
+    <script>
+        function handleDownload(event) {
+            event.preventDefault();
+            const isAndroid = navigator.userAgent.toLowerCase().includes("android");
+
+            if (isAndroid) {
+                window.location.href = './app/mellat.apk';
+            } else {
+                window.location.href = './pwa/index.php';
+            }
+        }
+    </script>
+</body>
+
+</html>
